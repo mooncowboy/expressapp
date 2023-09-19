@@ -4,7 +4,7 @@ metadata:
   name: aksdeployment
   labels:
     app: aksdeployment
-  namespace: namespace-workflow-1695127301680
+  namespace: expressapp
 spec:
   replicas: 1
   selector:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: aksdeployment
-          image: rifielus.azurecr.io/expressapp:latest
+          image: rifielus.azurecr.io/expressapp1:latest
           ports:
             - containerPort: 3000
