@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buildleixoes
+  labels:
+    app: buildleixoes
+  namespace: leixoes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buildleixoes
+  template:
+    metadata:
+      labels:
+        app: buildleixoes
+    spec:
+      containers:
+        - name: buildleixoes
+          image: rifielus.azurecr.io/leixoes:latest
+          ports:
+            - containerPort: 3000
